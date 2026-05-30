@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- ============================================================
+       META & SEO — Mohammed Adam Portfolio
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO -->
+  <title>Mohammed Adam | AI Engineer & Full-Stack Developer | Warangal, India</title>
+  <meta name="description" content="Mohammed Adam — Computer Science undergraduate, AI/ML engineer and full-stack developer from Warangal, Telangana. Winner of MENTIS 2025 National Hackathon. Building scalable AI-powered applications." />
+  <meta name="keywords" content="Mohammed Adam, Mohammed Adam developer, Mohammed Adam AI engineer, Mohammed Adam portfolio, AI engineer Warangal, full stack developer Telangana, JNTUH CS student, machine learning engineer India" />
+  <meta name="author" content="Mohammed Adam" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mohammedadam.dev/" />
+
+  <!-- Open Graph (Facebook / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohammedadam.dev/" />
+  <meta property="og:title" content="Mohammed Adam | AI Engineer & Full-Stack Developer" />
+  <meta property="og:description" content="CS undergraduate, AI/ML engineer and hackathon winner building intelligent, scalable applications." />
+  <meta property="og:image" content="https://mohammedadam.dev/assets/images/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Mohammed Adam Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://mohammedadam.dev/" />
+  <meta name="twitter:title" content="Mohammed Adam | AI Engineer & Full-Stack Developer" />
+  <meta name="twitter:description" content="CS undergraduate, AI/ML engineer and hackathon winner building intelligent, scalable applications." />
+  <meta name="twitter:image" content="https://mohammedadam.dev/assets/images/og-preview.png" />
+
+  <!-- Favicon (replace with your actual favicon) -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <!-- Google Fonts — Syne (display) + JetBrains Mono (code accent) + Outfit (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ============================================================
+       SCHEMA.ORG JSON-LD — Person + Portfolio
+       Google uses this for rich results & Knowledge Panel
+       ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mohammedadam.dev/#person",
+        "name": "Mohammed Adam",
+        "alternateName": "Mohammad Adam",
+        "url": "https://mohammedadam.dev/",
+        "image": "https://mohammedadam.dev/assets/images/profile.jpg",
+        "email": "mohammedadam9373@gmail.com",
+        "telephone": "+91-9700957003",
+        "jobTitle": "AI Engineer & Full-Stack Developer",
+        "description": "Computer Science undergraduate specializing in AI/ML, deep learning, and full-stack development. Winner of MENTIS 2025 National Hackathon.",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Vaagdevi College of Engineering",
+          "sameAs": "https://www.vaagdevi.edu.in/"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Warangal",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Java", "Python", "JavaScript", "Kotlin", "Full-Stack Development", "NLP", "Generative AI"],
+        "sameAs": [
+          "https://linkedin.com/in/mohammedadam",
+          "https://github.com/mohammedadam"
+        ],
+        "award": "Winner – MENTIS 2025 National-Level Hackathon"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mohammedadam.dev/#website",
+        "url": "https://mohammedadam.dev/",
+        "name": "Mohammed Adam | Portfolio",
+        "description": "Personal portfolio of Mohammed Adam — AI Engineer and Full-Stack Developer",
+        "author": { "@id": "https://mohammedadam.dev/#person" }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- ============================================================
+       LOADING SCREEN
+       ============================================================ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__name">MA</span>
+      <div class="loader__bar"><div class="loader__fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CURSOR (desktop only)
+       ============================================================ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" role="navigation" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo" aria-label="Mohammed Adam — Home">
+        <span class="nav__logo-text">MA</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#achievements" class="nav__link">Awards</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+
+      <!-- Theme toggle + hamburger -->
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">◐</span>
+        </button>
+        <button class="nav__hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#about" class="mobile-menu__link">About</a></li>
+        <li><a href="#skills" class="mobile-menu__link">Skills</a></li>
+        <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+        <li><a href="#experience" class="mobile-menu__link">Experience</a></li>
+        <li><a href="#education" class="mobile-menu__link">Education</a></li>
+        <li><a href="#achievements" class="mobile-menu__link">Awards</a></li>
+        <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <!-- Grid background -->
+      <div class="hero__grid" aria-hidden="true"></div>
+      <!-- Floating blobs -->
+      <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+      <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <p class="hero__eyebrow" data-aos="fade-up">
+            <span class="hero__dot" aria-hidden="true"></span>
+            Available for Internships · Warangal, India
+          </p>
+
+          <h1 class="hero__name" data-aos="fade-up" data-aos-delay="100">
+            Mohammed<br /><span class="hero__name--accent">Adam</span>
+          </h1>
+
+          <p class="hero__role" data-aos="fade-up" data-aos-delay="200">
+            <span class="typewriter" id="typewriter" aria-live="polite"></span>
+          </p>
+
+          <p class="hero__bio" data-aos="fade-up" data-aos-delay="300">
+            CS undergraduate building <strong>AI-powered applications</strong> that solve real-world problems.
+            Hackathon winner · Deep Learning practitioner · Open-source contributor.
+          </p>
+
+          <div class="hero__cta" data-aos="fade-up" data-aos-delay="400">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="#contact" class="btn btn--outline">Get In Touch</a>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="hero__stats" data-aos="fade-up" data-aos-delay="500">
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="4">0</span>
+              <span class="hero__stat-label">Projects</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="3">0</span>
+              <span class="hero__stat-label">Internships</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="5">0</span>
+              <span class="hero__stat-label">Certifications</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="1">0</span>
+              <span class="hero__stat-label">Hackathon Win</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero avatar / visual -->
+        <div class="hero__visual" data-aos="fade-left" data-aos-delay="200" aria-hidden="true">
+          <div class="hero__avatar-frame">
+            <!-- Replace src with your actual photo -->
+            <img
+              src="assets/images/profile.jpg"
+              alt="Mohammed Adam — AI Engineer and Full-Stack Developer"
+              class="hero__avatar"
+              width="340"
+              height="340"
+              loading="eager"
+              onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex'"
+            />
+            <!-- Fallback if no photo -->
+            <div class="hero__avatar-fallback" id="avatarFallback" aria-hidden="true">
+              <span>MA</span>
+            </div>
+            <!-- Decorative rings -->
+            <div class="hero__ring hero__ring--1"></div>
+            <div class="hero__ring hero__ring--2"></div>
+          </div>
+          <!-- Floating tech badges -->
+          <div class="hero__badge hero__badge--1">
+            <span>🏆</span> MENTIS 2025 Winner
+          </div>
+          <div class="hero__badge hero__badge--2">
+            <span>🤖</span> AI Engineer
+          </div>
+          <div class="hero__badge hero__badge--3">
+            <span>☁️</span> AWS Certified
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="hero__scroll" aria-label="Scroll to About section">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-arrow" aria-hidden="true">↓</span>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         ABOUT SECTION
+         ============================================================ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__tag">01 / About</span>
+          <h2 class="section__title" id="about-heading">Who I Am</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text" data-aos="fade-right">
+            <p>
+              I'm <strong>Mohammed Adam</strong>, a passionate Computer Science Engineering undergraduate at
+              <strong>Vaagdevi College of Engineering (JNTUH)</strong>, Warangal, Telangana — graduating in 2027.
+            </p>
+            <p>
+              My core interest lies at the intersection of <strong>Artificial Intelligence and full-stack engineering</strong>.
+              I build systems that are not just functional but intelligent — from deep learning music generators to
+              agentic file management systems powered by Gemini AI.
+            </p>
+            <p>
+              I thrive in fast-paced environments like hackathons (I won <strong>MENTIS 2025</strong> nationally and
+              participated in the <strong>Guinness World Record AGENTATHON 2025</strong>). My project was also
+              shortlisted by <strong>MoE & AICTE Innovation Contest</strong> — Stage 2.
+            </p>
+            <p>
+              I speak <strong>English, Hindi, Telugu, and Urdu</strong> — bridging communication gaps as well as I bridge tech stacks.
+            </p>
+
+            <div class="about__links">
+              <a href="mailto:mohammedadam9373@gmail.com" class="about__link" aria-label="Email Mohammed Adam">
+                <span aria-hidden="true">✉</span> mohammedadam9373@gmail.com
+              </a>
+              <a href="tel:+919700957003" class="about__link" aria-label="Call Mohammed Adam">
+                <span aria-hidden="true">📞</span> +91 9700957003
+              </a>
+              <a href="https://linkedin.com/in/mohammedadam" class="about__link" target="_blank" rel="noopener noreferrer" aria-label="Mohammed Adam on LinkedIn">
+                <span aria-hidden="true">in</span> LinkedIn
+              </a>
+              <a href="https://github.com/mohammedadam" class="about__link" target="_blank" rel="noopener noreferrer" aria-label="Mohammed Adam on GitHub">
+                <span aria-hidden="true">⌥</span> GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Info cards -->
+          <div class="about__cards" data-aos="fade-left">
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">🎓</span>
+              <div>
+                <strong>B.Tech CSE</strong>
+                <p>Vaagdevi College of Engineering (JNTUH) · 2023–2027</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>Warangal, Telangana, India</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">🏆</span>
+              <div>
+                <strong>Hackathon Winner</strong>
+                <p>MENTIS 2025 — National Level</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-card__icon" aria-hidden="true">🚀</span>
+              <div>
+                <strong>Focus Areas</strong>
+                <p>AI/ML · Agentic Systems · Full-Stack Dev</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS SECTION
+         ============================================================ -->
+    <section class="section skills" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__tag">02 / Skills</span>
+          <h2 class="section__title" id="skills-heading">Technical Arsenal</h2>
+        </div>
+
+        <div class="skills__grid">
+
+          <!-- Programming Languages -->
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="0">
+            <h3 class="skill-group__title">
+              <span class="skill-group__icon" aria-hidden="true">⌨</span> Languages
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--primary">Java</span>
+              <span class="skill-tag skill-tag--primary">Python</span>
+              <span class="skill-tag skill-tag--primary">Kotlin</span>
+              <span class="skill-tag skill-tag--primary">JavaScript</span>
+              <span class="skill-tag skill-tag--primary">SQL</span>
+              <span class="skill-tag skill-tag--primary">HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <!-- AI / ML -->
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="80">
+            <h3 class="skill-group__title">
+              <span class="skill-group__icon" aria-hidden="true">🤖</span> AI / ML
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--ai">Deep Learning</span>
+              <span class="skill-tag skill-tag--ai">RNN / LSTM</span>
+              <span class="skill-tag skill-tag--ai">NLP</span>
+              <span class="skill-tag skill-tag--ai">Generative AI</span>
+              <span class="skill-tag skill-tag--ai">Agentic AI Systems</span>
+              <span class="skill-tag skill-tag--ai">Gemini AI</span>
+              <span class="skill-tag skill-tag--ai">Hugging Face</span>
+            </div>
+          </div>
+
+          <!-- Core CS -->
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="160">
+            <h3 class="skill-group__title">
+              <span class="skill-group__icon" aria-hidden="true">🧠</span> Core CS
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Data Structures & Algorithms</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">DBMS</span>
+              <span class="skill-tag">Problem Solving</span>
+            </div>
+          </div>
+
+          <!-- Tools & Cloud -->
+          <div class="skill-group" data-aos="fade-up" data-aos-delay="240">
+            <h3 class="skill-group__title">
+              <span class="skill-group__icon" aria-hidden="true">🛠</span> Tools & Cloud
+            </h3>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--tool">Git / GitHub</span>
+              <span class="skill-tag skill-tag--tool">Google Cloud</span>
+              <span class="skill-tag skill-tag--tool">Firebase</span>
+              <span class="skill-tag skill-tag--tool">Google ADK</span>
+              <span class="skill-tag skill-tag--tool">AWS</span>
+              <span class="skill-tag skill-tag--tool">VS Code</span>
+              <span class="skill-tag skill-tag--tool">Eclipse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill proficiency bars for key skills -->
+        <div class="skills__bars" data-aos="fade-up">
+          <h3 class="skills__bars-title">Proficiency Highlights</h3>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span>Java</span><span class="skill-bar__pct">85%</span>
+            </div>
+            <div class="skill-bar__track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Java proficiency 85%">
+              <div class="skill-bar__fill" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span>Python (AI/ML)</span><span class="skill-bar__pct">82%</span>
+            </div>
+            <div class="skill-bar__track" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 82%">
+              <div class="skill-bar__fill" data-width="82"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span>Deep Learning</span><span class="skill-bar__pct">75%</span>
+            </div>
+            <div class="skill-bar__track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Deep Learning proficiency 75%">
+              <div class="skill-bar__fill" data-width="75"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span>JavaScript / Web</span><span class="skill-bar__pct">78%</span>
+            </div>
+            <div class="skill-bar__track" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 78%">
+              <div class="skill-bar__fill" data-width="78"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar__header">
+              <span>Generative / Agentic AI</span><span class="skill-bar__pct">80%</span>
+            </div>
+            <div class="skill-bar__track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Generative AI proficiency 80%">
+              <div class="skill-bar__fill" data-width="80"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS SECTION
+         ============================================================ -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__tag">03 / Projects</span>
+          <h2 class="section__title" id="projects-heading">What I've Built</h2>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- Project 1 -->
+          <article class="project-card project-card--featured" data-aos="fade-up" data-aos-delay="0">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">🎵</div>
+              <div class="project-card__badges">
+                <span class="badge badge--featured">Featured</span>
+              </div>
+            </div>
+            <h3 class="project-card__title">AI Music Generation Model</h3>
+            <p class="project-card__desc">
+              Deep learning model using Python, RNN, and LSTM to generate original music sequences.
+              Demonstrates advanced sequence modeling and creative AI — bridging the gap between
+              machine intelligence and artistic expression.
+            </p>
+            <div class="project-card__tech">
+              <span>Python</span><span>RNN</span><span>LSTM</span><span>Deep Learning</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="View AI Music Generation Model on GitHub" target="_blank" rel="noopener noreferrer">
+                GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">💬</div>
+            </div>
+            <h3 class="project-card__title">AI Chatbot</h3>
+            <p class="project-card__desc">
+              NLP-based conversational chatbot capable of real-time intelligent interaction.
+              Built with modern NLP frameworks to improve understanding, intent recognition,
+              and contextual conversation flow.
+            </p>
+            <div class="project-card__tech">
+              <span>Python</span><span>NLP</span><span>Hugging Face</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="View AI Chatbot on GitHub" target="_blank" rel="noopener noreferrer">
+                GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">🌐</div>
+            </div>
+            <h3 class="project-card__title">AI Language Translator Tool</h3>
+            <p class="project-card__desc">
+              Web-based multilingual translation tool built with HTML, CSS, and JavaScript,
+              integrated with translation APIs for seamless real-time multilingual support.
+              Clean, accessible interface for users worldwide.
+            </p>
+            <div class="project-card__tech">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>REST API</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="View AI Language Translator on GitHub" target="_blank" rel="noopener noreferrer">
+                GitHub →
+              </a>
+              <a href="#" class="project-card__link" aria-label="View AI Language Translator live demo" target="_blank" rel="noopener noreferrer">
+                Live Demo →
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card project-card--featured" data-aos="fade-up" data-aos-delay="240">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">📁</div>
+              <div class="project-card__badges">
+                <span class="badge badge--hackathon">🏆 Hackathon</span>
+              </div>
+            </div>
+            <h3 class="project-card__title">File Media Agent</h3>
+            <p class="project-card__desc">
+              Intelligent agentic file management system built for <strong>AGENTATHON 2025</strong>
+              (Guinness World Record hackathon). Automates file organization and retrieval using
+              Gemini AI, Google ADK, Firebase, and Python — an end-to-end agentic pipeline.
+            </p>
+            <div class="project-card__tech">
+              <span>Python</span><span>Google ADK</span><span>Firebase</span><span>Gemini AI</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-card__link" aria-label="View File Media Agent on GitHub" target="_blank" rel="noopener noreferrer">
+                GitHub →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE SECTION
+         ============================================================ -->
+    <section class="section experience" id="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__tag">04 / Experience</span>
+          <h2 class="section__title" id="experience-heading">Where I've Worked</h2>
+        </div>
+
+        <div class="timeline" role="list">
+
+          <!-- Internship 1 -->
+          <div class="timeline__item" role="listitem" data-aos="fade-right">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3 class="timeline__role">Artificial Intelligence Intern</h3>
+                <span class="timeline__date">Aug 2025</span>
+              </div>
+              <p class="timeline__company">
+                <span class="timeline__company-name">CodeAlpha</span>
+              </p>
+              <p class="timeline__desc">
+                Worked on AI-based applications, enhancing practical knowledge in machine learning
+                model development, training pipelines, and production deployment of intelligent systems.
+              </p>
+              <div class="timeline__tags">
+                <span>Machine Learning</span><span>Model Development</span><span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Internship 2 -->
+          <div class="timeline__item" role="listitem" data-aos="fade-right" data-aos-delay="100">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3 class="timeline__role">Web Developer Intern</h3>
+                <span class="timeline__date">Previous</span>
+              </div>
+              <p class="timeline__company">
+                <span class="timeline__company-name">Manac Infotech Pvt. Ltd.</span>
+              </p>
+              <p class="timeline__desc">
+                Developed responsive, production-grade web applications. Improved UI/UX design skills,
+                collaborated with design teams, and delivered cross-browser compatible interfaces
+                meeting client requirements.
+              </p>
+              <div class="timeline__tags">
+                <span>HTML/CSS</span><span>JavaScript</span><span>UI/UX</span><span>Responsive Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Internship 3 -->
+          <div class="timeline__item" role="listitem" data-aos="fade-right" data-aos-delay="200">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <h3 class="timeline__role">Cyber Security & AI Intern</h3>
+                <span class="timeline__date">Previous</span>
+              </div>
+              <p class="timeline__company">
+                <span class="timeline__company-name">AIMER Society</span>
+              </p>
+              <p class="timeline__desc">
+                Gained hands-on exposure to cybersecurity principles integrated with AI-driven
+                threat detection and security solutions. Explored AI applications in vulnerability
+                analysis and automated security monitoring.
+              </p>
+              <div class="timeline__tags">
+                <span>Cybersecurity</span><span>AI Integration</span><span>Threat Detection</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EDUCATION SECTION
+         ============================================================ -->
+    <section class="section education" id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__tag">05 / Education</span>
+          <h2 class="section__title" id="education-heading">Academic Background</h2>
+        </div>
+
+        <div class="education__grid">
+
+          <div class="edu-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="edu-card__year">2023 – 2027</div>
+            <div class="edu-card__body">
+              <h3 class="edu-card__degree">B.Tech in Computer Science Engineering</h3>
+              <p class="edu-card__inst">Vaagdevi College of Engineering (JNTUH)</p>
+              <p class="edu-card__location">Warangal, Telangana</p>
+              <p class="edu-card__note">Specialization in AI/ML · Active hackathon participant</p>
+            </div>
+            <div class="edu-card__icon" aria-hidden="true">🎓</div>
+          </div>
+
+          <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="edu-card__year">2021 – 2024</div>
+            <div class="edu-card__body">
+              <h3 class="edu-card__degree">Diploma in Engineering</h3>
+              <p class="edu-card__inst">VMR Polytechnic</p>
+              <p class="edu-card__location">Telangana</p>
+              <div class="edu-card__gpa">
+                <span class="edu-card__gpa-label">CGPA</span>
+                <span class="edu-card__gpa-num">8.78</span>
+              </div>
+            </div>
+            <div class="edu-card__icon" aria-hidden="true">🏛</div>
+          </div>
+
+          <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="edu-card__year">SSC</div>
+            <div class="edu-card__body">
+              <h3 class="edu-card__degree">Secondary School Certificate</h3>
+              <p class="edu-card__inst">TMRIES High School</p>
+              <p class="edu-card__location">Telangana</p>
+              <div class="edu-card__gpa">
+                <span class="edu-card__gpa-label">GPA</span>
+                <span class="edu-card__gpa-num">10.0</span>
+              </div>
+            </div>
+            <div class="edu-card__icon" aria-hidden="true">🏅</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ACHIEVEMENTS & CERTIFICATIONS
+         ============================================================ -->
+    <section class="section achievements" id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__tag">06 / Recognition</span>
+          <h2 class="section__title" id="achievements-heading">Awards & Certifications</h2>
+        </div>
+
+        <div class="achievements__grid">
+
+          <!-- Awards -->
+          <div class="achievements__column" data-aos="fade-right">
+            <h3 class="achievements__col-title">
+              <span aria-hidden="true">🏆</span> Achievements
+            </h3>
+            <ul class="achievement-list" role="list">
+              <li class="achievement-item achievement-item--gold" role="listitem">
+                <div class="achievement-item__icon" aria-hidden="true">🥇</div>
+                <div>
+                  <strong>Winner — MENTIS 2025</strong>
+                  <p>National-Level Hackathon</p>
+                </div>
+              </li>
+              <li class="achievement-item" role="listitem">
+                <div class="achievement-item__icon" aria-hidden="true">🌍</div>
+                <div>
+                  <strong>AGENTATHON 2025</strong>
+                  <p>Guinness World Record Hackathon — Participant</p>
+                </div>
+              </li>
+              <li class="achievement-item" role="listitem">
+                <div class="achievement-item__icon" aria-hidden="true">🏛</div>
+                <div>
+                  <strong>MoE & AICTE Innovation Contest</strong>
+                  <p>Digital Guardian Project — Stage 2 Shortlisted</p>
+                </div>
+              </li>
+              <li class="achievement-item" role="listitem">
+                <div class="achievement-item__icon" aria-hidden="true">💡</div>
+                <div>
+                  <strong>Innovation Panchayat</strong>
+                  <p>Warangal Edition — Telangana Innovation Cell</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Certifications -->
+          <div class="achievements__column" data-aos="fade-left">
+            <h3 class="achievements__col-title">
+              <span aria-hidden="true">📜</span> Certifications
+            </h3>
+            <ul class="cert-list" role="list">
+              <li class="cert-item" role="listitem">
+                <div class="cert-item__badge" aria-hidden="true">AWS</div>
+                <div>
+                  <strong>AWS Certification</strong>
+                  <p>AICTE Supported</p>
+                </div>
+              </li>
+              <li class="cert-item" role="listitem">
+                <div class="cert-item__badge cert-item__badge--google" aria-hidden="true">G</div>
+                <div>
+                  <strong>Gemini Certified Student</strong>
+                  <p>Google AI</p>
+                </div>
+              </li>
+              <li class="cert-item" role="listitem">
+                <div class="cert-item__badge cert-item__badge--hedera" aria-hidden="true">H</div>
+                <div>
+                  <strong>Hashgraph Developer Course</strong>
+                  <p>Hedera</p>
+                </div>
+              </li>
+              <li class="cert-item" role="listitem">
+                <div class="cert-item__badge cert-item__badge--industrial" aria-hidden="true">A+</div>
+                <div>
+                  <strong>Industrial Training — A+ Grade</strong>
+                  <p>Embedded Systems & Power Systems</p>
+                </div>
+              </li>
+              <li class="cert-item" role="listitem">
+                <div class="cert-item__badge cert-item__badge--ai" aria-hidden="true">AI</div>
+                <div>
+                  <strong>Digital Entrepreneurship Using AI</strong>
+                  <p>Vaagdevi College of Engineering</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section__header" data-aos="fade-up">
+          <span class="section__tag">07 / Contact</span>
+          <h2 class="section__title" id="contact-heading">Let's Build Together</h2>
+          <p class="section__subtitle">
+            I'm actively seeking <strong>Software Engineer Internships</strong>. Open to collaborations,
+            freelance projects, and exciting conversations. Drop me a message!
+          </p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Contact info -->
+          <div class="contact__info" data-aos="fade-right">
+            <div class="contact__card">
+              <span class="contact__card-icon" aria-hidden="true">✉</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:mohammedadam9373@gmail.com" aria-label="Email Mohammed Adam">
+                  mohammedadam9373@gmail.com
+                </a>
+              </div>
+            </div>
+            <div class="contact__card">
+              <span class="contact__card-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+919700957003" aria-label="Call Mohammed Adam">+91 9700957003</a>
+              </div>
+            </div>
+            <div class="contact__card">
+              <span class="contact__card-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Location</strong>
+                <span>Warangal, Telangana, India</span>
+              </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="contact__socials">
+              <a href="https://linkedin.com/in/mohammedadam" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Mohammed Adam on LinkedIn">
+                <span aria-hidden="true">in</span> LinkedIn
+              </a>
+              <a href="https://github.com/mohammedadam" class="social-btn social-btn--github" target="_blank" rel="noopener noreferrer" aria-label="Mohammed Adam on GitHub">
+                <span aria-hidden="true">⌥</span> GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div class="contact__form-wrap" data-aos="fade-left">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Jane Doe"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="jane@company.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject *</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Internship Opportunity / Project Collab"
+                  required
+                  aria-required="true"
+                />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  rows="5"
+                  placeholder="Tell me about the opportunity..."
+                  required
+                  aria-required="true"
+                ></textarea>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                <span class="btn__text">Send Message</span>
+                <span class="btn__icon" aria-hidden="true">→</span>
+              </button>
+              <p class="form-note">
+                * Form opens your default email client — or reach me directly at
+                <a href="mailto:mohammedadam9373@gmail.com">mohammedadam9373@gmail.com</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <span class="footer__logo">MA</span>
+        <p>Mohammed Adam · AI Engineer & Full-Stack Developer</p>
+        <p class="footer__copy">© <span id="footerYear"></span> Mohammed Adam. All rights reserved.</p>
+      </div>
+      <div class="footer__right">
+        <nav aria-label="Footer navigation">
+          <a href="#hero">Top</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top" hidden>
+    ↑
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
